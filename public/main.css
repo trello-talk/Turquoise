@@ -1,0 +1,36 @@
+html, body {
+  overflow: hidden;
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+}
+.main {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  background: #40E0D0;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+img {
+  max-height: 88px;
+  display: inline-block;
+}
+.status {
+  margin: 0;
+}
+.c-icon {
+  margin: 0 10px;
+}
+.c-icon.f {
+  transform: rotate(180deg);
+}
+.main.error {
+  background: #ee5253;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="92px" height="92px" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-oauth-x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="80" height="80" rx="40"></rect>
+    </defs>
+    <g id="Bot-bot" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD---Add-Bot" sketch:type="MSArtboardGroup" transform="translate(-1040.000000, -636.000000)">
+            <g id="Page-1" sketch:type="MSLayerGroup" transform="translate(799.000000, 601.000000)">
+                <g id="Group-246">
+                    <g id="icon-oauth-x" transform="translate(209.000000, 0.000000)">
+                        <g id="Group" transform="translate(38.000000, 41.000000)">
+                            <g id="Rectangle-468-+-=-Server-+-Check">
+                                <g id="Rectangle-468">
+                                    <use stroke-opacity="0.2" stroke="#FFFFFF" stroke-width="6" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                                    <use stroke="none" xlink:href="#path-1"></use>
+                                </g>
+                                <g id="=-Server"></g>
+                                <path d="M40.5,45.8869638 L26.0436923,60 L21,54.6088224 L34.9892336,40.507053 L21,26.85 L26.6593846,21 L40.5,34.9519556 L54.3406154,21 L60,26.85 L46.0107664,40.507053 L60,54.6088224 L54.9563077,60 L40.5,45.8869638 Z" id="icon-auth-nope" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
