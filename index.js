@@ -55,8 +55,8 @@ app.use('/connect', require('./routes/connect'))
 app.use('/endpoints', require('./routes/endpoints'))
 app.use('/*', require('./routes/404'))
 
-app.listen(429, () => {
-  console.info('Running on port 429')
+app.listen(config.port, () => {
+  console.info(`Running on port ${config.port}`)
 })
 
 })()

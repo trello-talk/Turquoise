@@ -10,5 +10,6 @@
     "salt": "",
     "timestampMap": "abcdefghij"
   },
-  "testing": false
+  "port": 80,
+  "ip": ""
 }
