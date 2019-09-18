@@ -6,6 +6,13 @@
     "password": "",
     "database": "Turquoise"
   },
+  "r": {
+    "host": "",
+    "port": 28015,
+    "user": "",
+    "password": "",
+    "database": "Turquoise"
+  },
   "tg": {
     "salt": "",
     "timestampMap": "abcdefghij"
