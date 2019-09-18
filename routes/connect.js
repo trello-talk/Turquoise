@@ -2,6 +2,7 @@ const express = require('express')
 const btoa = require('btoa')
 const sf = require('snekfetch')
 const router = express.Router()
+const config = require('../config.json')
 
 router.get('/:id', async (req, res) => {
   if(!req.params.id) return res.displayError(400, 'Empty Profile ID')
