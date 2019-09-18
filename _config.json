@@ -11,7 +11,7 @@
     "port": 28015,
     "user": "",
     "password": "",
-    "database": "Turquoise"
+    "database": "Trello"
   },
   "tg": {
     "salt": "",
