@@ -45,7 +45,7 @@ router.get('/:id/redirect', async (req, res) => {
   if(!req.params.id) return res.displayError(400, 'Empty Profile ID')
   let profile = await req.db.getProfile(req.params.id)
   if(!profile) return res.displayError(400, 'Invalid Profile ID')
-  let redirect = encodeURIComponent(`${config.ip}/connect/${profile.id}`)
+  let redirect = encodeURIComponent(`${config.ip}:${config.port}/connect/${profile.id}`)
   res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${profile.client_id}&scope=identify%20guilds&response_type=code&redirect_uri=${redirect}`);
 })
 
