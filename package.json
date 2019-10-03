@@ -13,7 +13,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "btoa": "^1.1.2",
-    "eventemitter3": "^3.0.1",
+    "eventemitter3": "^4.0.0",
     "express": "^4.13.4",
     "express-vue": "^4.0.14",
     "node-fetch": "^2.6.0",
