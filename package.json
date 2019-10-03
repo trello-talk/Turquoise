@@ -18,7 +18,7 @@
     "express-vue": "^4.0.14",
     "node-fetch": "^2.6.0",
     "rethinkdb": "^2.3.3",
-    "snekfetch": "^3.6.4",
+    "snekfetch": "^4.0.4",
     "token-generator": "^1.0.0"
   }
 }
