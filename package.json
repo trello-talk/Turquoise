@@ -12,7 +12,7 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
-    "btoa": "^1.1.2",
+    "btoa": "^1.2.1",
     "eventemitter3": "^3.0.1",
     "express": "^4.13.4",
     "express-vue": "^4.0.14",
