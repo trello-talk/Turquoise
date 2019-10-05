@@ -19,7 +19,7 @@ if(qs.t && qs.tk) {
 
 let token = qs.t || localStorage.token || '';
 let ticket = qs.tk || localStorage.ticket || '';
-if(!token || !ticket) window.location.href = `http://74.208.18.206:81/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
+if(!token || !ticket) window.location.href = `https://auth.trellobot.xyz/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
 if(!localStorage.token) localStorage.token = token
 if(!localStorage.ticket) localStorage.ticket = ticket
 
@@ -33,14 +33,14 @@ window.discordRequest = async e => {
   } catch (e) {
     localStorage.removeItem('token')
     localStorage.removeItem('ticket')
-    window.location.href = `http://74.208.18.206:81/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
+    window.location.href = `https://auth.trellobot.xyz/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
   }
 }
 
 window.logout = () => {
   localStorage.removeItem('token')
   localStorage.removeItem('ticket')
-  window.location.href = `https://74.208.18.206:81/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
+  window.location.href = `https://auth.trellobot.xyz/connect/trello#${window.location.href.replace(/((#|\?).+)/g, '')}`
 }
 
 window.onload = () => {
@@ -57,7 +57,7 @@ window.onload = () => {
       console.log('yay we got things done!')
       console.log(Trello.token());
       try{
-        let res = await Snekfetch.get(`http://74.208.18.206:81/trello/post/${Trello.token()}`).set('Authorization', localStorage.ticket)
+        let res = await Snekfetch.get(`https://auth.trellobot.xyz/trello/post/${Trello.token()}`).set('Authorization', localStorage.ticket)
         console.log(res)
         document.querySelector('h1').innerText = "Hell yeah! It's done!"
       } catch (e) {
