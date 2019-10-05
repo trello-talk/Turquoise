@@ -36,12 +36,16 @@ module.exports = class Database extends EventEmitter {
   }
 
   addToken(id, trelloToken, trelloID) {
-    return rdb.table('users').insert({ 
+    return rdb.table('users').insert({
       current: null,
       id,
       trelloID,
       trelloToken
   }).run(this.conn);
+  }
+
+  getUser(id) {
+    return rdb.table('users').get(id).default(null).run(this.conn);
   }
 
   async getAllProfiles() {

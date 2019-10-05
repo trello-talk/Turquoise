@@ -62,6 +62,7 @@ window.onload = () => {
         document.querySelector('h1').innerText = "Hell yeah! It's done!"
       } catch (e) {
         if(e.statusCode === 401) return window.logout();
+        if (e.statusCode === 400) return document.querySelector('h1').innerText = `Error: ${e.body}!!`
         console.log({e})
         document.querySelector('h1').innerText = "Oh no! Check console!"
       }
