@@ -28,7 +28,7 @@ await db2.connect(config.r2);
             return res.status(400).send("You're already authorized");
         }
         const result = await (
-          fetch(`https://api.trello.com/1/tokens/${req.params.token}?token=${req.params.token}&key=8ccd41c2d23f40cbdc55044c9b42c26d`)
+          fetch(`https://api.trello.com/1/tokens/${req.params.token}?token=${req.params.token}&key=${config.trelloKey}`)
             .then(res => res.json())
             .then(json => json.idMember)
         ).catch(() => new Error("coudn't get trello user id"))
@@ -79,6 +79,7 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname+'/public'))
 app.use('/connect', require('./routes/connect'))
 app.use('/endpoints', require('./routes/endpoints'))
+app.use('/trello', require('./routes/trello'))
 app.use('/*', require('./routes/404'))
 
 app.listen(config.port, () => {
