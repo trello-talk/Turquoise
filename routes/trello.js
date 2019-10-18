@@ -1,7 +1,7 @@
 /*
  This file is part of Turquoise.
 
- Copyright © Snazzah ??? - 2019
+ Copyright © Snazzah 2016 - 2019
  Copyright © Yamboy1 (and contributors) 2019
  
  This program is free software: you can redistribute it and/or modify
