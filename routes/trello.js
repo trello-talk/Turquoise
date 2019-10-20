@@ -51,7 +51,7 @@ router.get('/auth/script.js', (req, res) => {
 
   let token = qs.t || localStorage.token || '';
   let ticket = qs.tk || localStorage.ticket || '';
-  if(!token || !ticket) window.location.href = \`${config.ip}:${config.port}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
+  if(!token || !ticket) window.location.href = \`${config.ip}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
   if(!localStorage.token) localStorage.token = token
   if(!localStorage.ticket) localStorage.ticket = ticket
 
@@ -65,14 +65,14 @@ router.get('/auth/script.js', (req, res) => {
     } catch (e) {
       localStorage.removeItem('token')
       localStorage.removeItem('ticket')
-      window.location.href = \`${config.ip}:${config.port}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
+      window.location.href = \`${config.ip}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
     }
   }
 
   window.logout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('ticket')
-    window.location.href = \`${config.ip}:${config.port}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
+    window.location.href = \`${config.ip}/connect/trello#\${window.location.href.replace(/((#|\\?).+)/g, '')}\`
   }
 
   window.onload = () => {
@@ -89,7 +89,7 @@ router.get('/auth/script.js', (req, res) => {
         console.log('yay we got things done!')
         console.log(Trello.token());
         try{
-          let res = await Snekfetch.get(\`${config.ip}:${config.port}/trello/post/\${Trello.token()}\`).set('Authorization', localStorage.ticket)
+          let res = await Snekfetch.get(\`${config.ip}/trello/post/\${Trello.token()}\`).set('Authorization', localStorage.ticket)
           console.log(res)
           document.querySelector('h1').innerText = "Hell yeah! It's done!"
         } catch (e) {
