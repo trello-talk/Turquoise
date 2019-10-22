@@ -31,11 +31,11 @@ router.get("/auth/", async (req, res) => {
     
         <title>Trello Bot Authorization</title>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="/trello/auth/style.css" type="text/css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/snekfetch@4.0.4/browser.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://trello.com/1/client.js?key=${config.trelloKey}"></script>
-        <script src="script.js"></script>
+        <script src="/trello/auth/script.js"></script>
       </head>
       <body>
         <div class="main">
