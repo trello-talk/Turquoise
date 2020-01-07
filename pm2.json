@@ -1,0 +1,9 @@
+{
+        "apps": [
+                {
+                        "name": "Turquoise",
+                        "script": "npm",
+                        "args": "start"
+                }
+        ]
+}
