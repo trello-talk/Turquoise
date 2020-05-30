@@ -35,13 +35,13 @@ router.get('/:id', async (req, res) => {
     const auth = btoa(`${profile.client_id}:${profile.secret}`)
     let redirect = encodeURIComponent(`${config.ip}/connect/${profile.id}`)
     try {
-      let tokenres = await sf.post(`https://discordapp.com/api/oauth2/token?grant_type=authorization_code&code=${req.query.code}&redirect_uri=${redirect}`)
+      let tokenres = await sf.post(`https://discord.com/api/oauth2/token?grant_type=authorization_code&code=${req.query.code}&redirect_uri=${redirect}`)
         .set('Authorization', `Basic ${auth}`)
       console.log(tokenres.body)
 
       if(tokenres.body.scope !== 'identify guilds') return res.displayError(400, 'Invalid Scope')
 
-      let userres = await sf.get(`https://discordapp.com/api/users/@me`)
+      let userres = await sf.get(`https://discord.com/api/users/@me`)
         .set('Authorization', `Bearer ${tokenres.body.access_token}`)
 
       let ticket = req.tokengen.generate()
@@ -56,7 +56,7 @@ router.get('/:id', async (req, res) => {
     }
   }
   //res.send({id:req.params.id, profile})
-  //res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${CLIENT_ID}&scope=identify&response_type=code&redirect_uri=${redirect}`);
+  //res.redirect(`https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&scope=identify&response_type=code&redirect_uri=${redirect}`);
 })
 
 
@@ -65,7 +65,7 @@ router.get('/:id/redirect', async (req, res) => {
   let profile = await req.db.getProfile(req.params.id)
   if(!profile) return res.displayError(400, 'Invalid Profile ID')
   let redirect = encodeURIComponent(`${config.ip}/connect/${profile.id}`)
-  res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${profile.client_id}&scope=identify%20guilds&response_type=code&redirect_uri=${redirect}`);
+  res.redirect(`https://discord.com/oauth2/authorize?client_id=${profile.client_id}&scope=identify%20guilds&response_type=code&redirect_uri=${redirect}`);
 })
 
 module.exports = router
