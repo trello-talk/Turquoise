@@ -76,7 +76,7 @@ router.get('/auth/script.js', (req, res) => {
 
   window.discordRequest = async e => {
     try {
-      let r = await fetch(\`https://discordapp.com/api/users/\${e}\`, { headers: {
+      let r = await fetch(\`https://discord.com/api/users/\${e}\`, { headers: {
           'authorization': \`Bearer \${token}\`
         }})
       let json = await r.json()
