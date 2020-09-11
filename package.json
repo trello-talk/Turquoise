@@ -16,7 +16,7 @@
     "eventemitter3": "^3.0.1",
     "express": "^4.13.4",
     "express-vue": "^4.0.14",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "rethinkdb": "^2.3.3",
     "snekfetch": "^3.6.4",
     "token-generator": "^1.0.0"
